@@ -45,6 +45,11 @@
   color: var(--gray);
 }
 
+.content {
+  margin: auto;
+  max-width: 960px;
+}
+
 .header {
   display: block;
   position: fixed;
@@ -87,4 +92,29 @@
 .vertical-line-div {
   width: 1px;
   background-color: var(--light-gray);
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 440px;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }

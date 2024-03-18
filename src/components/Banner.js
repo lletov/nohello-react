@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Banner = () => {
   return (
-    <div className='banner'>
+    <div className='content banner'>
         <div className='banner-text'>
             <h1>no hello</h1>
             <p className='gray-text'>
