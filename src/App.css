@@ -10,6 +10,15 @@
   --accent-blue: #007BFF;
   --gray: #8A8A8A;
   --light-gray: #F2F2F7;
+  --white: #FFF;
+  --accent-hover: #006ADC;
+  --black: #222222;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 * h1 {
@@ -89,6 +98,18 @@
   justify-content: center;
 }
 
+.dialog-message{
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.h2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .vertical-line-div {
   width: 1px;
   background-color: var(--light-gray);
@@ -117,4 +138,129 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.example-block{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.example-row{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.message-example {
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.generator {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.generator-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.generator input {
+  width: 100%;
+  height: 48px;
+  border: solid 2px var(--light-gray);
+  border-radius: 24px;
+  background-color: var(--light-gray);
+  padding: 0px 24px;
+}
+
+.generator input::placeholder {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.generator input:focus {
+  outline: none !important;
+  border: solid 2px var(--accent-blue) ;
+}
+
+.m-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+
+.m-button:hover {
+  cursor: pointer;
+  background-color: var(--accent-hover);
+  transition: 0.3s ease-in-out;
+}
+
+.message-res-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.message {
+  min-height: 120px;
+  background-color: var(--light-gray);
+  border-radius: 24px;
+  width: 720px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.message-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: end;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content-row {
+  padding: 0px 0px 12px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+a {
+  color: var(--gray);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--black);
+  transition: 0.3s;
 }
