@@ -107,11 +107,6 @@
   transition: 0.3s;
 }
 
-.lang-change-btn img {
-  filter: invert(26%) sepia(98%) saturate(3747%) hue-rotate(201deg) brightness(94%) contrast(101%);
-  transition: 0.3s;
-}
-
 .banner {
   padding: 60px 0px 32px 0px;
   margin: auto;
@@ -274,8 +269,30 @@
 .message-btns {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 20px;
   justify-content: end;
+}
+
+.message-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  color: var(--gray);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.message-btn img {
+  height: 12px;
+  transition: 0.3s;
+  filter: invert(57%) sepia(1%) saturate(0%) hue-rotate(243deg) brightness(96%) contrast(88%);
+}
+
+.message-btn:hover {
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .footer {
