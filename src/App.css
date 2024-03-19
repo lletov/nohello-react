@@ -98,10 +98,22 @@
   justify-content: center;
 }
 
+.banner-column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dialog{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .dialog-message{
   padding: 8px 12px;
   border-radius: 20px;
-  width: fit-content;
+  width: 300px;
 }
 
 .h2-content {

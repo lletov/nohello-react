@@ -6,9 +6,10 @@ export const DialogMessage = ({user, tone, text}) => {
         return (
             <div 
                 className='dialog-message'
-                style={{backgroundColor: tone =='right' ? cssVars.light_green : cssVars.light_orange, 
-                color: tone =='right'? cssVars.green : cssVars.orange,
-                paddingRight: '40px'}}
+                style={{backgroundColor: tone =='true' ? cssVars.light_green : cssVars.light_orange, 
+                color: tone =='true'? cssVars.green : cssVars.orange,
+                textAlign: 'left',
+                marginRight: '120px'}}
             >
                 <p>{text}</p>
             </div>
@@ -19,7 +20,8 @@ export const DialogMessage = ({user, tone, text}) => {
                 className='dialog-message'
                 style={{backgroundColor: cssVars.light_gray, 
                 color: cssVars.gray,
-                paddingLeft: '40px'}}
+                textAlign: 'right',
+                marginLeft: '120px'}}
             >
             <p>{text}</p>
         </div>
