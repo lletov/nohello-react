@@ -17,6 +17,12 @@ export const MessageGenerator = () => {
                 maxLength={140}
                 ></input>
                 <button className='m-button'>Генерировать</button>
+                <div className='input-panel'>
+                    <button className='input-clear'>Очистить</button>
+                    <div className='vertical-line-div' style={{backgroundColor: '#8a8a8a', height: '20px'}}></div>
+                    <div className='input-counter'><p>0 / 140</p></div>
+                    
+                </div>
             </div>
             <div>
                 <Message/>
