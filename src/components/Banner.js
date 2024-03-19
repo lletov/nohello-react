@@ -65,7 +65,7 @@ export const Banner = () => {
                 
             </div>
         </div>
-        <h5 className='gray-text'>Узнать больше</h5>
+        <h6 className='gray-text'>Узнать больше</h6>
     </div>
   )
 }

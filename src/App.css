@@ -42,6 +42,11 @@
 }
 
 * h5 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+* h6 {
   font-size: 14px;
   font-weight: 400;
 }
@@ -79,6 +84,32 @@
   align-items: center;
   justify-content: end;
   max-width: 960px;
+}
+
+.lang-change-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  transition: 0.3s;
+}
+
+.lang-change-btn img {
+  height: 12px;
+  filter: invert(30%) sepia(98%) saturate(2938%) hue-rotate(201deg) brightness(104%) contrast(104%);
+  transition: 0.3s;
+}
+
+.lang-change-btn:hover {
+  color: var(--accent-hover);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-change-btn img {
+  filter: invert(26%) sepia(98%) saturate(3747%) hue-rotate(201deg) brightness(94%) contrast(101%);
+  transition: 0.3s;
 }
 
 .banner {
