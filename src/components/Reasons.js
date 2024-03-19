@@ -3,7 +3,7 @@ import { MessageExample } from './MessageExample'
 
 export const Reasons = () => {
   return (
-    <div className='content reasons'>
+    <div className='content reasons' id='reasons'>
       <div className='reasons-title'>
         <h2>Почему это важно?</h2>
       </div>

@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Arimo';
   font-size: 16px;
+  scroll-behavior: smooth;
 
   --accent-blue: #007BFF;
   --gray: #8A8A8A;
@@ -62,6 +63,7 @@
 .content {
   margin: auto;
   max-width: 960px;
+  padding-top: 40px;
 }
 
 .header {

@@ -14,7 +14,6 @@ function App() {
       <Reasons/>
       <MessageGenerator/>
       <Footer/>
-      <p>{cssVars.title}</p>
     </div>
   );
 }
