@@ -1,10 +1,15 @@
 import React from 'react'
 import { Message } from './Message'
+import { Loader } from './Loader'
 
 export const MessageGenerator = () => {
   return (
     <div className='content generator'>
         <div className='h2-content'>
+            <div className='sticker'>Beta</div>
+            <div className='sticker-info'>
+                <p></p>
+            </div>
             <h2>Сгенерируйте нужное сообщение</h2>
             <p className='gray-text'>
             Не всегда есть возможность думать над тем, как описать все кратко. Введите тему, о которой будет сообщение или вопросы, о которых нужно узнать в поле ниже, и получите готовое сообщение за несколько секунд
@@ -25,7 +30,8 @@ export const MessageGenerator = () => {
                 </div>
             </div>
             <div>
-                <Message/>
+                {/* <Message/> */}
+                <Loader/>
             </div>
         </div>
     </div>

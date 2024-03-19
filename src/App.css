@@ -14,6 +14,8 @@
   --white: #FFF;
   --accent-hover: #006ADC;
   --black: #222222;
+  --green: #007D1B;
+  --orange: #F2970E;
 }
 
 .app {
@@ -199,9 +201,21 @@
 }
 
 .generator {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.sticker{
+  position: absolute;
+  top: 40px;
+  left: 672px;
+  padding: 4px 6px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 12px;
+  border-radius: 12px;
 }
 
 .generator-forms {
@@ -283,6 +297,36 @@
   background-color: var(--accent-hover);
   transition: 0.3s ease-in-out;
 }
+
+.loader {
+  min-height: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: var(--gray);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--gray);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1.2s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
 
 .message-res-form {
   display: flex;
