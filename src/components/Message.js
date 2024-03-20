@@ -2,14 +2,14 @@ import React from 'react'
 import Refresh from './../assets/refresh.png'
 import Copy from './../assets/copy.png'
 
-export const Message = () => {
+export const Message = ({messageValue}) => {
   return (
     <div className='message-res-form'>
         <div>
             <h3>Ваше сообщение:</h3>
         </div>
         <div className='message'>
-            <div>Text</div>
+            <div>{messageValue}</div>
             <div className='message-btns'>
               <div className='message-btn'>
                 <img src={Refresh}/>

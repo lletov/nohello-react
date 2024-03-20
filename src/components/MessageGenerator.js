@@ -2,8 +2,9 @@ import React from 'react'
 import { Message } from './Message'
 import { Loader } from './Loader'
 import { useState } from 'react'
+import { Response } from './Response'
 
-export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue}) => {
+export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate, loaderStatus, messageValue}) => {
   return (
     <div className='content generator'>
         <div className='h2-content'>
@@ -25,7 +26,10 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                 value={inputValue}
                 onChange={(e) => handleInput(e.target.value)}
                 ></input>
-                <button className='m-button'>Генерировать</button>
+                <button 
+                    className='m-button'
+                    onClick={(e) => handleGenerate(inputValue)}
+                >Генерировать</button>
                 <div className='input-panel'>
                     <button className='input-clear' onClick={(e) => resetInput(e)}>Очистить</button>
                     <div className='vertical-line-div' style={{backgroundColor: '#8a8a8a', height: '20px'}}></div>
@@ -33,10 +37,10 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                     
                 </div>
             </div>
-            <div>
-                <Message/>
-                {/* <Loader/> */}
-            </div>
+            <Response 
+                loaderStatus={loaderStatus}
+                messageValue={messageValue}
+            />
         </div>
     </div>
   )
