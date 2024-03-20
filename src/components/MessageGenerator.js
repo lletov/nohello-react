@@ -1,8 +1,9 @@
 import React from 'react'
 import { Message } from './Message'
 import { Loader } from './Loader'
+import { useState } from 'react'
 
-export const MessageGenerator = () => {
+export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue}) => {
   return (
     <div className='content generator'>
         <div className='h2-content'>
@@ -18,20 +19,23 @@ export const MessageGenerator = () => {
         <div className='generator-forms'>
             <div className='input-form'>
                 <input 
+                name='msg-input'
                 placeholder='Введите тему или ключевые вопросы сообщения'
                 maxLength={140}
+                value={inputValue}
+                onChange={(e) => handleInput(e.target.value)}
                 ></input>
                 <button className='m-button'>Генерировать</button>
                 <div className='input-panel'>
-                    <button className='input-clear'>Очистить</button>
+                    <button className='input-clear' onClick={(e) => resetInput(e)}>Очистить</button>
                     <div className='vertical-line-div' style={{backgroundColor: '#8a8a8a', height: '20px'}}></div>
-                    <div className='input-counter'><p>0 / 140</p></div>
+                    <div className='input-counter'><p>{inputLength} / 140</p></div>
                     
                 </div>
             </div>
             <div>
-                {/* <Message/> */}
-                <Loader/>
+                <Message/>
+                {/* <Loader/> */}
             </div>
         </div>
     </div>
