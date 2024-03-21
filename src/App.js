@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import {cssVars} from './CssVars'
 import { useEffect, useState, useContext, createContext } from 'react';
 import { LoaderContext, MessageContext, ErrorContext, InputContext } from './components/Context';
+import { Notification } from './components/Notification';
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
 
   return (
     <div className="app">
+      <Notification title={'Успешно!'} text={'Сообщение скопировано!'}/>
       <Header/>
       <Banner/>
       <Reasons/>
