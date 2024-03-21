@@ -3,9 +3,9 @@ import { Message } from './Message'
 import { Loader } from './Loader'
 import { Error } from './Error'
 import { FutureMessage } from './FutureMessage'
-import { LoaderContext, MessageContext } from './LoaderContext.js'
+import { LoaderContext, MessageContext } from './Context.js'
 
-export const Response = ({err}) => {
+export const Response = () => {
     const stat = useContext(LoaderContext)
     const mess = useContext(MessageContext)
     switch (stat) {
@@ -24,9 +24,9 @@ export const Response = ({err}) => {
                 <Message messageValue={mess} />
             )
             break;
-        case 2:
+        case 3:
             return (
-                <Error err={err} />
+                <Error/>
             )
             break;
         default:

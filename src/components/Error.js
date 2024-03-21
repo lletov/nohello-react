@@ -1,9 +1,13 @@
 import React from 'react'
+import { useContext } from 'react'
+import { ErrorContext } from './Context'
 
-export const Error = ({err}) => {
+export const Error = () => {
+  const er = useContext(ErrorContext)
   return (
     <div className='error-place'>
-        <p>Ошибка: {err}</p>
+        <p><strong>Ошибка</strong></p>
+        <p>{er}</p>
     </div>
   )
 }

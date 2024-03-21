@@ -6,7 +6,7 @@ import { MessageGenerator } from './components/MessageGenerator';
 import { Footer } from './components/Footer';
 import {cssVars} from './CssVars'
 import { useEffect, useState, useContext, createContext } from 'react';
-import { LoaderContext, MessageContext } from './components/LoaderContext';
+import { LoaderContext, MessageContext, ErrorContext } from './components/Context';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
   const [inputCounter, setInputCounter] = useState(0)
   const [loaderStatus, setLoaderStatus] = useState(0)
   const [messageValue, setMessageValue] = useState('')
+  const [errorValue, setErrorValue] = useState('d')
 
   function handleInput(val){
     setInputValue(val)
@@ -30,37 +31,47 @@ function App() {
   }
 
   async function handleGenerate(val){
-    console.log('handleGenerate called with value: ' + val)
-    setLoaderStatus(1)
-    let randomNumber = getRandomInt(99)
-    try {
-      let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}`)
-      console.log(res.status)
-      if (res.status == 200){
-        let j = await res.json()
-        setMessageValue(j.title)
-        console.log(j.title)
-        setLoaderStatus(2)
-        console.log(loaderStatus)
-      }
-      else {
-        console.error(res.status);
-      }
-    }
-    catch(err){
-      console.log(err)
+    if (val != '') {
+      console.log('handleGenerate called with value: ' + val)
+      setLoaderStatus(1)
 
-    }
-    finally {
-      console.log('handleGenerate finished')
+      let randomNumber = getRandomInt(20)
+      try {
+        let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}`)
+        console.log('Response status: ' + res.status)
+        if (res.ok){
+          let j = await res.json()
+          setMessageValue(j.title)
+          console.log('Response text: ' + j.title)
+          setLoaderStatus(2)
+        } else {
+          // throw res.status
+          console.log(res)
+          throw new Error(res.status + ' ' + res.statusText)
+        }
+      }
+      catch(err){
+        console.log(err)
+        setLoaderStatus(3)
+        setErrorValue(err.message)
+
+      }
+      finally {
+        console.log('handleGenerate finished')
+      }
+    } else {
+      console.log('empty input')
+      setLoaderStatus(0)
     }
   }
+    
 
   return (
     <div className="app">
       <Header/>
       <Banner/>
       <Reasons/>
+      <ErrorContext.Provider value={errorValue}>
       <MessageContext.Provider value={messageValue}>
       <LoaderContext.Provider value={loaderStatus}>
         <MessageGenerator 
@@ -73,6 +84,7 @@ function App() {
         />
       </LoaderContext.Provider>
       </MessageContext.Provider>
+      </ErrorContext.Provider>
       
       <Footer/>
     </div>

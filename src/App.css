@@ -16,6 +16,8 @@
   --black: #222222;
   --green: #007D1B;
   --orange: #F2970E;
+  --red: #c71212;
+  --light-red: #ffeded;
 }
 
 .app {
@@ -374,6 +376,29 @@
   color: var(--black);
   cursor: pointer;
   transition: 0.3s;
+}
+
+.future-msg {
+  height: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--gray);
+  border: dashed 4px var(--light-gray);
+  border-radius: 24px;
+}
+
+.error-place {
+  height: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  color: var(--red);
+  border-radius: 24px;
+  background-color: var(--light-red);
 }
 
 .footer {
