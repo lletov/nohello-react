@@ -5,9 +5,12 @@ import { Reasons } from './components/Reasons';
 import { MessageGenerator } from './components/MessageGenerator';
 import { Footer } from './components/Footer';
 import {cssVars} from './CssVars'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext, createContext } from 'react';
+import { LoaderContext, MessageContext } from './components/LoaderContext';
+
 
 function App() {
+
   const [inputValue, setInputValue] = useState('')
   const [inputCounter, setInputCounter] = useState(0)
   const [loaderStatus, setLoaderStatus] = useState(0)
@@ -28,8 +31,7 @@ function App() {
 
   async function handleGenerate(val){
     console.log('handleGenerate called with value: ' + val)
-    document.querySelector('.message-res-form').style.display = 'flex'
-    setLoaderStatus(!loaderStatus)
+    setLoaderStatus(1)
     let randomNumber = getRandomInt(99)
     try {
       let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}`)
@@ -38,7 +40,8 @@ function App() {
         let j = await res.json()
         setMessageValue(j.title)
         console.log(j.title)
-        setLoaderStatus(!loaderStatus)
+        setLoaderStatus(2)
+        console.log(loaderStatus)
       }
       else {
         console.error(res.status);
@@ -52,24 +55,25 @@ function App() {
       console.log('handleGenerate finished')
     }
   }
-  // useEffect(() => {
-  //   setLoaderActive(!loaderActive)
-  // },[loaderActive])
 
   return (
     <div className="app">
       <Header/>
       <Banner/>
       <Reasons/>
-      <MessageGenerator 
-        handleInput={handleInput}
-        inputLength={inputCounter}
-        inputValue={inputValue}
-        resetInput={resetInput}
-        handleGenerate={handleGenerate}
-        loaderStatus={loaderStatus}
-        messageValue={messageValue}
-      />
+      <MessageContext.Provider value={messageValue}>
+      <LoaderContext.Provider value={loaderStatus}>
+        <MessageGenerator 
+          handleInput={handleInput}
+          inputLength={inputCounter}
+          inputValue={inputValue}
+          resetInput={resetInput}
+          handleGenerate={handleGenerate}
+          messageValue={messageValue}
+        />
+      </LoaderContext.Provider>
+      </MessageContext.Provider>
+      
       <Footer/>
     </div>
   );

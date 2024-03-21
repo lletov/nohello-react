@@ -4,7 +4,7 @@ import { Loader } from './Loader'
 import { useState } from 'react'
 import { Response } from './Response'
 
-export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate, loaderStatus, messageValue}) => {
+export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate}) => {
   return (
     <div className='content generator'>
         <div className='h2-content'>
@@ -37,10 +37,7 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                     
                 </div>
             </div>
-            <Response 
-                loaderStatus={loaderStatus}
-                messageValue={messageValue}
-            />
+            <Response/>
         </div>
     </div>
   )

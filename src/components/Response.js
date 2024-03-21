@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Message } from './Message'
 import { Loader } from './Loader'
 import { Error } from './Error'
 import { FutureMessage } from './FutureMessage'
+import { LoaderContext, MessageContext } from './LoaderContext.js'
 
-export const Response = ({loaderStatus, messageValue, err}) => {
-    switch (loaderStatus) {
+export const Response = ({err}) => {
+    const stat = useContext(LoaderContext)
+    const mess = useContext(MessageContext)
+    switch (stat) {
         case 0:
             return (
                 <FutureMessage/>
@@ -18,7 +21,7 @@ export const Response = ({loaderStatus, messageValue, err}) => {
             break;
         case 2:
             return (
-                <Message messageValue={messageValue} />
+                <Message messageValue={mess} />
             )
             break;
         case 2:
