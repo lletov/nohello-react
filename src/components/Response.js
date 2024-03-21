@@ -5,7 +5,7 @@ import { Error } from './Error'
 import { FutureMessage } from './FutureMessage'
 import { LoaderContext, MessageContext } from './Context.js'
 
-export const Response = () => {
+export const Response = ({handleGenerate}) => {
     const stat = useContext(LoaderContext)
     const mess = useContext(MessageContext)
     switch (stat) {
@@ -21,7 +21,10 @@ export const Response = () => {
             break;
         case 2:
             return (
-                <Message messageValue={mess} />
+                <Message 
+                    messageValue={mess} 
+                    handleGenerate={handleGenerate}
+                />
             )
             break;
         case 3:

@@ -6,7 +6,7 @@ import { MessageGenerator } from './components/MessageGenerator';
 import { Footer } from './components/Footer';
 import {cssVars} from './CssVars'
 import { useEffect, useState, useContext, createContext } from 'react';
-import { LoaderContext, MessageContext, ErrorContext } from './components/Context';
+import { LoaderContext, MessageContext, ErrorContext, InputContext } from './components/Context';
 
 
 function App() {
@@ -41,17 +41,14 @@ function App() {
         console.log('Response status: ' + res.status)
         if (res.ok){
           let j = await res.json()
-          setMessageValue(j.title)
+          setMessageValue(j.title + j.title + j.title + j.title + j.title) // 5 times response text for test 
           console.log('Response text: ' + j.title)
           setLoaderStatus(2)
         } else {
-          // throw res.status
-          console.log(res)
           throw new Error(res.status + ' ' + res.statusText)
         }
       }
       catch(err){
-        console.log(err)
         setLoaderStatus(3)
         setErrorValue(err.message)
 
@@ -71,6 +68,7 @@ function App() {
       <Header/>
       <Banner/>
       <Reasons/>
+      <InputContext.Provider value={inputValue}>
       <ErrorContext.Provider value={errorValue}>
       <MessageContext.Provider value={messageValue}>
       <LoaderContext.Provider value={loaderStatus}>
@@ -85,7 +83,7 @@ function App() {
       </LoaderContext.Provider>
       </MessageContext.Provider>
       </ErrorContext.Provider>
-      
+      </InputContext.Provider>
       <Footer/>
     </div>
   );

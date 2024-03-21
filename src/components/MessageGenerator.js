@@ -37,7 +37,7 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                     
                 </div>
             </div>
-            <Response/>
+            <Response handleGenerate={handleGenerate}/>
         </div>
     </div>
   )
