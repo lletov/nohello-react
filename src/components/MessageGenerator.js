@@ -9,6 +9,7 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
     <div className='content generator'>
         <div className='h2-content'>
             <div className='sticker'>Beta</div>
+            {/* Этот раздел будет корректно функционаровать, когда мы подключим backend, а пока что в виде сгенерированного сообщения возвращается случайная цитата 5 раз подряд с открытого сайта по тестированию запросов web api  */}
             <div className='sticker-info'>
                 <p></p>
             </div>
