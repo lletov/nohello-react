@@ -93,12 +93,12 @@
 }
 
 .lang-change-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-blue);
   padding: 4px;
-  transition: 0.3s;
+  background-color: transparent;
 }
 
 .lang-change-btn img {
