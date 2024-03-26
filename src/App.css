@@ -67,7 +67,7 @@
 .content {
   margin: auto;
   max-width: 960px;
-  padding-top: 40px;
+  padding: 40px 10px 0px 10px;
 }
 
 .header {
@@ -86,7 +86,7 @@
   font-size: 14px;
   color: var(--accent-blue);
   margin: auto;
-  padding: 8px 0px;
+  padding: 8px 10px;
   align-items: center;
   justify-content: end;
   max-width: 960px;
@@ -114,7 +114,7 @@
 }
 
 .banner {
-  padding: 60px 0px 32px 0px;
+  padding: 60px 10px 32px 10px;
   margin: auto;
   max-width: 960px;
   height: 100vh;
@@ -145,7 +145,8 @@
 .dialog-message{
   padding: 8px 12px;
   border-radius: 20px;
-  width: 300px;
+  max-width: 300px;
+  min-width: 120px;
 }
 
 .h2-content {
@@ -168,6 +169,7 @@
 .text-columns {
   display: flex;
   flex-direction: row;
+  gap: 40px;
   justify-content: space-between;
 }
 
@@ -175,7 +177,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 440px;
+  max-width: 440px;
 }
 
 .examples {
@@ -212,7 +214,7 @@
 .sticker{
   position: absolute;
   top: 48px;
-  left: 672px;
+  left: 680px;
   padding: 4px 6px;
   background-color: var(--orange);
   color: var(--white);
@@ -334,6 +336,7 @@
 .message-res-form {
   display: flex;
   flex-direction: row;
+  gap: 20px;
   justify-content: space-between;
   align-items: end;
 }
@@ -342,7 +345,7 @@
   min-height: 120px;
   background-color: var(--light-gray);
   border-radius: 24px;
-  width: 720px;
+  max-width: 720px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -452,4 +455,94 @@ a:hover {
 
 .active-notification{
   top: 12px;
+}
+
+@media (max-width: 960px) {
+  .banner-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  * h1 {
+    font-size: 52px;
+    font-weight: 700;
+  }
+  
+  * h2 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  * h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  * p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  * h5 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  * h6 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .banner-content {
+    gap: 20px;
+  }
+  .example-row {
+    flex-direction: column;
+  }
+  .input-form{
+    flex-direction: column;
+  }
+  .input-panel{
+    right: 20px;
+  }
+  .message-res-form{
+    flex-direction: column;
+    align-items: start;
+  }
+  .generator-forms {
+    gap: 40px;
+  }
+  .sticker {
+    left: 10px;
+    top: 24px;
+  }
+  .footer-content-row {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .banner {
+    padding-bottom: 8px;
+  }
+  .banner-content{
+    gap: 12px;
+  }
+  .banner-column {
+    gap: 12px;
+  }
+  .text-columns{
+    flex-direction: column;
+  }
+  .future-msg {
+    padding: 10px;
+    text-align: center;
+  }
 }
