@@ -553,8 +553,18 @@ a:hover {
   }
 }
 
-@media (max-height: 750px) {
+@media (max-height: 750px ) {
+  .banner-content{
+    flex-direction: row;
+  }
   #find-more-link {
     display: none;
+  }
+  .dialog-message {
+    padding: 4px 12px;
+  }
+  .banner {
+    padding-bottom: 8px;
+    padding-top: 36px;
   }
 }
