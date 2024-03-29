@@ -24,6 +24,6 @@ Other tech's
 Project will work correctly on devices with screen width more than 380 pixels \
 Homesreen will correctly work on devices with screen resolution 400x840 pixels or more 
 
-|Resolution|380 px width|400x840 or more|
+|Resolution|Mobile|PC|
 |-|--------|--------|
-| |Will work correctly by width|Fully correctly work|
+| |Work correctly by width > 380 px|Fully correctly work|
