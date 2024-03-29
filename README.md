@@ -10,7 +10,7 @@ Built with
 - **HTML**, 
 - **CSS**, 
 - **JS**, 
-- **React (State, Context)**, 
+- **React** (State, Context), 
 
 Other tech's
 - **WEB API**
