@@ -26,4 +26,4 @@ Homesreen will correctly work on devices with screen resolution 400x840 pixels o
 
 |Resolution|Mobile|PC|
 |-|--------|--------|
-| |Work correctly by width > 380 px|Fully correctly work|
+| |Work correctly by width > 380 px|Work correctly|
