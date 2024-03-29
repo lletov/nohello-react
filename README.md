@@ -1,4 +1,5 @@
-# nohello (link)
+# nohello 
+[GitHub Pages link](https://lletov.github.io/nohello-react/)
 
 > Please don't start a chat with just "hello". A message without context can leave the other person waiting and feeling a little frustrated. Instead, be proactive and include your question or request right in the first message!
 
