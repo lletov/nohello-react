@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lletov/nohello-react/static/css/main.cc6c0ae2.css",
+    "main.js": "/lletov/nohello-react/static/js/main.a95f69fe.js",
+    "static/js/453.33d006cc.chunk.js": "/lletov/nohello-react/static/js/453.33d006cc.chunk.js",
+    "index.html": "/lletov/nohello-react/index.html",
+    "main.cc6c0ae2.css.map": "/lletov/nohello-react/static/css/main.cc6c0ae2.css.map",
+    "main.a95f69fe.js.map": "/lletov/nohello-react/static/js/main.a95f69fe.js.map",
+    "453.33d006cc.chunk.js.map": "/lletov/nohello-react/static/js/453.33d006cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc6c0ae2.css",
+    "static/js/main.a95f69fe.js"
+  ]
+}
