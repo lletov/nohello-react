@@ -553,7 +553,7 @@ a:hover {
   }
 }
 
-@media (max-height: 750px ) {
+@media (orientation: landscape ) {
   .banner-content{
     flex-direction: row;
   }
