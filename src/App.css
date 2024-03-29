@@ -443,6 +443,7 @@ a:hover {
   gap:4px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   z-index: 10;
   padding: 12px 24px;
   position: fixed;
