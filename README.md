@@ -15,6 +15,7 @@ Built with
 
 Other tech's
 - **WEB API**
+- **i18n (multilanguage)**
 - **Git**
 
 ## Languages
