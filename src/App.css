@@ -553,7 +553,7 @@ a:hover {
   }
 }
 
-@media (orientation: landscape ) {
+@media screen and (min-width: 500px) and (max-height: 700px){
   .banner-content{
     flex-direction: row;
   }
@@ -566,5 +566,11 @@ a:hover {
   .banner {
     padding-bottom: 8px;
     padding-top: 36px;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-height: 740px){
+  #find-more-link {
+    display: none;
   }
 }
