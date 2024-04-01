@@ -19,7 +19,7 @@ export const Footer = () => {
                     {t("github_page")} GitHub</a>
             </div>
             <div>
-                {t("language")}
+                {t("language")}: {t("title")}
             </div>
         </div>
     </div>
