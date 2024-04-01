@@ -7,7 +7,8 @@ import { Footer } from './components/Footer';
 import {cssVars} from './CssVars'
 import { useEffect, useState, useContext, createContext } from 'react';
 import { LoaderContext, MessageContext, ErrorContext, InputContext } from './components/Context';
-import { Notification } from './components/Notification';
+import { Notification } from './components/Notification'
+import { useTranslation } from "react-i18next";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
   const [loaderStatus, setLoaderStatus] = useState(0)
   const [messageValue, setMessageValue] = useState('')
   const [errorValue, setErrorValue] = useState('d')
+
+  const { t } = useTranslation();
 
   function handleInput(val){
     setInputValue(val)
@@ -66,7 +69,7 @@ function App() {
 
   return (
     <div className="app">
-      <Notification title={'Успешно!'} text={'Сообщение скопировано!'}/>
+      <Notification title={'Успешно!'} text={t("copied")}/>
       <Header/>
       <Banner/>
       <Reasons/>
