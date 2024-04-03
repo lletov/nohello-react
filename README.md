@@ -21,7 +21,7 @@ Other tech's
 
 ## Languages
 - [x] Russian
-- [ ] English
+- [x] English (multilanguage branch)
 
 ## Devices
 Project will work correctly on devices with screen width more than 380 pixels \
