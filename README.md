@@ -15,6 +15,7 @@ Built with
 
 Other tech's
 - **WEB API**
+- **async/await**
 - **i18n (multilanguage)**
 - **Git**
 
