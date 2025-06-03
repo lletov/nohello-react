@@ -1,16 +1,16 @@
 import React from 'react'
-import { LANGUAGES } from "./../constants/index.ts";
+import { LANGUAGES } from "../constants/index";
 import { useTranslation } from "react-i18next";
-import "./../i18n.ts";
+import "../i18n.ts";
 
-const isActive = ({ isActive }) => `link ${isActive ? "active" : ""}`;
+const isActive = ({ isActive }:{ isActive: boolean }) => `link ${isActive ? "active" : ""}`;
 
 
 export const Header = () => {
 
   const { i18n, t } = useTranslation();
 
-  const onChangeLang = (e) => {
+  const onChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang_code = e.target.value;
     i18n.changeLanguage(lang_code);
   };

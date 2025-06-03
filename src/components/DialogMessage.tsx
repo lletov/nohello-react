@@ -1,7 +1,13 @@
 import React from 'react'
 import { cssVars } from '../CssVars'
 
-export const DialogMessage = ({user, tone, text}) => {
+type DialogMessageProps = {
+  user: string;
+  tone: string;
+  text: string;
+};
+
+export const DialogMessage = ({user, tone, text}:DialogMessageProps) => {
     if (window.screen.width > 480){
         if (user === 'left') {
             return (

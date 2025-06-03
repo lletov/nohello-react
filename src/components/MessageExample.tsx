@@ -1,7 +1,12 @@
 import React from 'react'
 import { cssVars } from '../CssVars'
 
-export const MessageExample = ({text, tone}) => {
+type MessageExampleProps = {
+  text: string;
+  tone: string;
+};
+
+export const MessageExample = ({text, tone}:MessageExampleProps) => {
   return (
     <div 
         className='message-example' 

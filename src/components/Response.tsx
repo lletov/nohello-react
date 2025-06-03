@@ -3,9 +3,9 @@ import { Message } from './Message'
 import { Loader } from './Loader'
 import { Error } from './Error'
 import { FutureMessage } from './FutureMessage'
-import { LoaderContext, MessageContext } from './Context.js'
+import { LoaderContext, MessageContext } from './Context'
 
-export const Response = ({handleGenerate}) => {
+export const Response = ({handleGenerate}:{handleGenerate: (val: string) => void}) => {
     const stat = useContext(LoaderContext)
     const mess = useContext(MessageContext)
     switch (stat) {
