@@ -21,7 +21,7 @@ function App() {
 
   const { t } = useTranslation();
 
-  function handleInput(val){
+  function handleInput(val:string){
     setInputValue(val)
     setInputCounter(val.length)
   }
@@ -30,11 +30,11 @@ function App() {
     setInputCounter(0)
   }
 
-  function getRandomInt(max) {
+  function getRandomInt(max:number) {
     return Math.floor(Math.random() * max);
   }
 
-  async function handleGenerate(val){
+  async function handleGenerate(val:string){
     if (val != '') {
       console.log('handleGenerate called with value: ' + val)
       setLoaderStatus(1)
@@ -52,7 +52,7 @@ function App() {
           throw new Error(res.status + ' ' + res.statusText)
         }
       }
-      catch(err){
+      catch(err:any){
         setLoaderStatus(3)
         setErrorValue(err.message)
 
@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="app">
-      <Notification title={'Успешно!'} text={t("copied")}/>
+      <Notification text={t("copied")}/>
       <Header/>
       <Banner/>
       <Reasons/>

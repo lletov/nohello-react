@@ -4,13 +4,18 @@ import Copy from './../assets/copy.png'
 import { InputContext } from './Context'
 import { useTranslation } from "react-i18next";
 
-export const Message = ({messageValue, handleGenerate}) => {
+type MessageProps = {
+  messageValue: string;
+  handleGenerate: (val: string) => void;
+};
+
+export const Message = ({messageValue, handleGenerate}:MessageProps) => {
 
   const { t } = useTranslation();
   const inp = useContext(InputContext)
 
-  async function copyMessage(val){
-    const not = document.querySelector('.notification')
+  async function copyMessage(val:string){
+    const not = document.querySelector('.notification') as HTMLElement
     await navigator.clipboard.writeText(val)
     console.log(messageValue +  ' msg copied to clipboard')
     not.classList.toggle('active-notification')

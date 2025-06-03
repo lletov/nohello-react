@@ -1,11 +1,16 @@
-import React from 'react'
-import { Message } from './Message'
-import { Loader } from './Loader'
-import { useState } from 'react'
 import { Response } from './Response'
 import { useTranslation } from "react-i18next";
 
-export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate}) => {
+type MessageGeneratorProps = {
+  handleInput: (val: string) => void; 
+  inputLength: number;
+  resetInput: (val: string) => void;
+  inputValue: string;
+  handleGenerate: (val: string) => void | void;
+  messageValue: string
+};
+
+export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate, messageValue}:MessageGeneratorProps) => {
 
   const { t } = useTranslation();
 
@@ -36,7 +41,7 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                     onClick={(e) => handleGenerate(inputValue)}
                 >{t("generate")}</button>
                 <div className='input-panel'>
-                    <button className='input-clear' onClick={(e) => resetInput(e)}>{t("clear")}</button>
+                    <button className='input-clear' onClick={(e) => resetInput('')}>{t("clear")}</button>
                     <div className='vertical-line-div' style={{backgroundColor: '#8a8a8a', height: '20px'}}></div>
                     <div className='input-counter'><p>{inputLength} / 140</p></div>
                     
