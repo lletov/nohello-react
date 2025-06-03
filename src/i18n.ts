@@ -9,6 +9,9 @@ i18n
         interpolation: {
         escapeValue: false,
         },
+        backend: {
+        loadPath: '/nohello-react/locales/{{lng}}/{{ns}}.json',
+        },
         resources:{
             ru: {
                 translation: {
