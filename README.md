@@ -21,12 +21,7 @@ Other tech's
 
 ## Languages
 - [x] Russian
-- [x] English (multilanguage branch)
+- [x] English
 
 ## Devices
-Project will work correctly on devices with screen width more than 380 pixels \
-Homesreen will correctly work on devices with screen resolution 400x840 pixels or more 
-
-|Resolution|Mobile|PC|
-|-|--------|--------|
-| |Work correctly by width > 380 px|Work correctly|
+Project will work correctly on devices with screen width more than 360 pixels \
