@@ -1,42 +1,46 @@
 import React from 'react'
 import { MessageExample } from './MessageExample'
+import { useTranslation } from "react-i18next";
 
 export const Reasons = () => {
+  
+  const { i18n, t } = useTranslation();
+
   return (
     <div className='content reasons' id='reasons'>
       <div className='reasons-title'>
-        <h2>Почему это важно?</h2>
+        <h2>{t("importance_q")}</h2>
       </div>
       <div className='text-columns'>
         <div className='text-column'>
-          <p>Представьте, что вы позвонили кому-то по телефону, поздоровались и поставили его на удержание...</p>
-          <p>Вы пытаетесь быть вежливым и не сразу переходите к просьбе, как если бы вы делали это лично или по телефону. Но чат не является ни тем, ни другим. Печатать гораздо медленнее, чем говорить. Вместо того, чтобы быть вежливым, вы просто заставляете собеседника ждать, пока вы сформулируете свой вопрос, а это приводит к потере продуктивности.</p>
+          <p>{t("first_paragraph")}</p>
+          <p>{t("second_paragraph")}</p>
         </div>
         <div className='text-column'>
-          <p>Если вы считаете, что просто сказать "Привет" и задать вопрос - это немного грубовато, вы все равно можете предварить свое сообщение таким количеством любезностей, какое сочтете нужным.</p>
-          <p>Кажется банальным, но описание своего вопроса до получения отклика от собеседника, делает возможным <strong>асинхронное общение</strong>. Если собеседник в отъезде, и вы уходите до его возвращения, он все равно сможет ответить на ваш вопрос, вместо того, чтобы просто смотреть на "Привет" и гадать, что вы хотели.</p>
-          <p>Когда общение идет правильно - всем хорошо!</p>
+          <p>{t("third_paragraph")}</p>
+          <p>{t("fourth_paragraph")}</p>
+          <p>{t("fifth_paragraph")}</p>
         </div>
       </div>
       <div className='examples'>
         <div>
-          <h3>Еще несколько примеров</h3>
+          <h3>{t("more_examples")}</h3>
         </div>
         <div className='example-block'>
-          <p>Вместо этого</p>
+          <p>{t("instead")}</p>
           <div className='example-row'>
-            <MessageExample text={'Привет, на связи?'} tone={'wrong'}/>
-            <MessageExample text={'Привет, Соня. Есть небольшой вопрос'} tone={'wrong'}/>
-            <MessageExample text={'Есть минутка?'} tone={'wrong'}/>
-            <MessageExample text={'тут?'} tone={'wrong'}/>
+            <MessageExample text={t("wrong_ex_1")} tone={'wrong'}/>
+            <MessageExample text={t("wrong_ex_2")} tone={'wrong'}/>
+            <MessageExample text={t("wrong_ex_3")} tone={'wrong'}/>
+            <MessageExample text={t("wrong_ex_4")} tone={'wrong'}/>
           </div>
         </div>
         <div  className='example-block'>
-          <p>Попробуйте использовать</p>
+          <p>{t("try_use")}</p>
           <div className='example-row'>
-            <MessageExample text={'Привет, как дела? Не подскажешь, к какому сроку это надо будет сделать?'} tone={'right'}/>
-            <MessageExample text={'Привет! Надеюсь, у тебя все хорошо. Мне нужно обсудить следующий релиз, когда у тебя будет минутка :)'} tone={'right'}/>
-            <MessageExample text={'Хай, если не занят, не мог бы ты обновить инструкцию по деплою?'} tone={'right'}/>
+            <MessageExample text={t("true_ex_1")} tone={'right'}/>
+            <MessageExample text={t("true_ex_2")} tone={'right'}/>
+            <MessageExample text={t("true_ex_3")} tone={'right'}/>
           </div>
         </div>
       </div>

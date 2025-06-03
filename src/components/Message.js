@@ -2,8 +2,11 @@ import React, { useContext } from 'react'
 import Refresh from './../assets/refresh.png'
 import Copy from './../assets/copy.png'
 import { InputContext } from './Context'
+import { useTranslation } from "react-i18next";
 
 export const Message = ({messageValue, handleGenerate}) => {
+
+  const { t } = useTranslation();
   const inp = useContext(InputContext)
 
   async function copyMessage(val){
@@ -18,7 +21,7 @@ export const Message = ({messageValue, handleGenerate}) => {
   return (
     <div className='message-res-form'>
         <div>
-            <h3>Ваше сообщение:</h3>
+            <h3>{t("your_message")}</h3>
         </div>
         <div className='message'>
             <div>{messageValue}</div>
@@ -28,14 +31,14 @@ export const Message = ({messageValue, handleGenerate}) => {
                 onClick={(e) => handleGenerate(inp)}
               >
                 <img src={Refresh}/>
-                <p>Другой вариант</p>
+                <p>{t("another_variant")}</p>
               </div>
               <div 
                 className='message-btn'
                 onClick={() => copyMessage(messageValue)}
               >
                 <img src={Copy}/>
-                <p>Скопировать</p>
+                <p>{t("copy")}</p>
               </div>
             </div>
         </div>

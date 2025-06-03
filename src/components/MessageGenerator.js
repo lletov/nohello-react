@@ -3,8 +3,12 @@ import { Message } from './Message'
 import { Loader } from './Loader'
 import { useState } from 'react'
 import { Response } from './Response'
+import { useTranslation } from "react-i18next";
 
 export const MessageGenerator = ({handleInput, inputLength, resetInput, inputValue, handleGenerate}) => {
+
+  const { t } = useTranslation();
+
   return (
     <div className='content generator'>
         <div className='h2-content'>
@@ -13,16 +17,16 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
             <div className='sticker-info'>
                 <p></p>
             </div>
-            <h2>Сгенерируйте нужное сообщение</h2>
+            <h2>{t("generator")}</h2>
             <p className='gray-text'>
-            Не всегда есть возможность думать над тем, как описать все кратко. Введите тему, о которой будет сообщение или вопросы, о которых нужно узнать в поле ниже, и получите готовое сообщение за несколько секунд
+            {t("generator_description")}
             </p>
         </div>
         <div className='generator-forms'>
             <div className='input-form'>
                 <input 
                 name='msg-input'
-                placeholder='Введите тему или ключевые вопросы сообщения'
+                placeholder={t("input_question")}
                 maxLength={140}
                 value={inputValue}
                 onChange={(e) => handleInput(e.target.value)}
@@ -30,9 +34,9 @@ export const MessageGenerator = ({handleInput, inputLength, resetInput, inputVal
                 <button 
                     className='m-button'
                     onClick={(e) => handleGenerate(inputValue)}
-                >Генерировать</button>
+                >{t("generate")}</button>
                 <div className='input-panel'>
-                    <button className='input-clear' onClick={(e) => resetInput(e)}>Очистить</button>
+                    <button className='input-clear' onClick={(e) => resetInput(e)}>{t("clear")}</button>
                     <div className='vertical-line-div' style={{backgroundColor: '#8a8a8a', height: '20px'}}></div>
                     <div className='input-counter'><p>{inputLength} / 140</p></div>
                     
