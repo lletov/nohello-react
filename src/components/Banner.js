@@ -67,7 +67,7 @@ export const Banner = () => {
                 
             </div>
         </div>
-        <a href='#reasons'><h6 className='gray-text' id='find-more-link'>{t("find_more")}</h6></a>
+        {/* <a href='#reasons'><h6 className='gray-text' id='find-more-link'>{t("find_more")}</h6></a> */}
     </div>
   )
 }

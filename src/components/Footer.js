@@ -7,7 +7,7 @@ export const Footer = () => {
 
   return (
     <div className='content gray-text footer'>
-        <div>
+        <div style={{paddingTop: '120px'}}>
         <p>{t("about")}</p>
     </div>
         <hr/>
