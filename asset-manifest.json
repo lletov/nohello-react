@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nohello-react/static/css/main.8ee8be71.css",
-    "main.js": "/nohello-react/static/js/main.4b237c59.js",
+    "main.css": "/nohello-react/static/css/main.3e41f3ac.css",
+    "main.js": "/nohello-react/static/js/main.e439c9c9.js",
     "static/js/453.33d006cc.chunk.js": "/nohello-react/static/js/453.33d006cc.chunk.js",
     "index.html": "/nohello-react/index.html",
-    "main.8ee8be71.css.map": "/nohello-react/static/css/main.8ee8be71.css.map",
-    "main.4b237c59.js.map": "/nohello-react/static/js/main.4b237c59.js.map",
+    "main.3e41f3ac.css.map": "/nohello-react/static/css/main.3e41f3ac.css.map",
+    "main.e439c9c9.js.map": "/nohello-react/static/js/main.e439c9c9.js.map",
     "453.33d006cc.chunk.js.map": "/nohello-react/static/js/453.33d006cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ee8be71.css",
-    "static/js/main.4b237c59.js"
+    "static/css/main.3e41f3ac.css",
+    "static/js/main.e439c9c9.js"
   ]
 }
