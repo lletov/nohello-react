@@ -10,7 +10,7 @@ Prototyped with
 Built with 
 - **HTML**, 
 - **CSS**, 
-- **JS**, 
+- **TS + JS**, 
 - **React** (State, Context), 
 
 Other tech's
